@@ -12,37 +12,31 @@ function App() {
     setListItems([...listItems, newItem]); 
     setNewItem("");
   } 
-  
+
+
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
         <p>
           To Do List
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React!
-        </a>
       </header>
       
-        <div>
-        <p>List Items:</p>
-        <ul>
-          {listItems.map((item, i) => {
-              return <li>{item}</li>
-          })} 
-        </ul>
-        </div>
+        <div style={{marginLeft: "20px"}}>
+          <p>List Items:</p>
+          <ul>
+            {listItems.map((item, i) => {
+                return <li>{item}</li>
+            })} 
+          </ul>
+        
 
-          <label>
-            New Item:
-          </label>
-          <input type="text" name="name" value={newItem} onChange={(event) => setNewItem(event.target.value)}/>
-          <button onClick={handleAdd}> Add </button>
+            <label>
+              New Item:
+            </label>
+            <input type="text" name="name" value={newItem} onChange={(event) => setNewItem(event.target.value)}/>
+            <button onClick={handleAdd}> Add </button>
+          </div>
     </div>
 
   );
